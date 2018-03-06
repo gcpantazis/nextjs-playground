@@ -13,6 +13,8 @@ app.prepare().then(() => {
 
     if (pathname === "/") {
       app.render(req, res, "/a", query);
+    } else if (pathname === "/other") {
+      app.render(req, res, "/b", query);
     } else {
       handle(req, res, parsedUrl);
     }
