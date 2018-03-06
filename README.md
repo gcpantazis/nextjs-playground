@@ -5,5 +5,12 @@
 3. Navigate to `localhost:3000/b`
 4. Click link to client-side navigate to `/`.
 5. Hit browser back.
-6. You're now on `/b`, which shouldn't be allowed to render.
-7. You can refresh to get back to the SSR 404.
+
+Before Fix:
+
+* You're now on `/b`, which shouldn't be allowed to render.
+* You can refresh to get back to the SSR 404.
+
+After proposed solution:
+
+* Browser redirects to the bad destination (/b), which engages SSR and correctly shows a 404.
